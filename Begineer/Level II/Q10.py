@@ -9,9 +9,16 @@
 
 def stone_piles(n):
     piles = []
-    for x in range(n):
-        value = n + (2 * x)
-        piles.append(value)
+    if n % 2 == 0:
+        value = 1
+        while value < n:
+            piles.append(value)
+            value += 2
+    else:
+        value = 2
+        while value < n:
+            piles.append(value)
+            value += 2
 
     return piles
 
